@@ -1,5 +1,7 @@
 // Assignment code here
 
+// Password criteria: length (will be between 8 and 128 characters), character types: uppercase, lowercase, numbers, special characters
+// Character types: at least 1 must be selected and then validated via prompt
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
