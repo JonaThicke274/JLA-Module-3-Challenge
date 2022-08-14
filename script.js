@@ -18,6 +18,86 @@ function charLength () {
   return passLength;
 };
 
+// Function to ask user if password needs uppercase characters
+function upperCase () {
+  // Ask user to indicate if upper case characters are needed
+  var upperCaseConfirm = window.prompt("Does your password need upper case characters? Press 1 for YES, or 2 for NO.");
+  // Chbanges user input to interger type
+  upperCaseConfirm = parseInt(upperCaseConfirm);
+  
+  // Validates user input
+  if (upperCaseConfirm === 1) {
+    return true;
+  }
+  else if (upperCaseConfirm === 2) {
+    return false;   
+  }
+  else {
+    window.alert("You need to provide a valid answer. Please try again.");
+    return upperCase();
+  }
+}
+
+// Function to ask user if password needs lowercase characters
+function lowerCase () {
+  // Ask user to indicate if lower case characters are needed
+  var lowerCaseConfirm = window.prompt("Does your password need lower case characters? Press 1 for YES, or 2 for NO.");
+  // Chbanges user input to interger type
+  lowerCaseConfirm = parseInt(lowerCaseConfirm);
+  
+  // Validates user input
+  if (lowerCaseConfirm === 1) {
+    return true;
+  }
+  else if (lowerCaseConfirm === 2) {
+    return false;   
+  }
+  else {
+    window.alert("You need to provide a valid answer. Please try again.");
+    return lowerCase();
+  }
+}
+
+// Function to ask user if password needs numbers
+function numbers () {
+  // Ask user to indicate if lower case characters are needed
+  var numbersConfirm = window.prompt("Does your password need numbers? Press 1 for YES, or 2 for NO.");
+  // Chbanges user input to interger type
+  numbersConfirm = parseInt(numbersConfirm);
+  
+  // Validates user input
+  if (numbersConfirm === 1) {
+    return true;
+  }
+  else if (numbersConfirm === 2) {
+    return false;   
+  }
+  else {
+    window.alert("You need to provide a valid answer. Please try again.");
+    return numbers();
+  }
+}
+
+// Function to ask user if password needs special characters
+function special () {
+  // Ask user to indicate if lower case characters are needed
+  var specialConfirm = window.prompt("Does your password need special characters? Press 1 for YES, or 2 for NO.");
+  // Chbanges user input to interger type
+  specialConfirm = parseInt(specialConfirm);
+  
+  // Validates user input
+  if (specialConfirm === 1) {
+    return true;
+  }
+  else if (specialConfirm === 2) {
+    return false;   
+  }
+  else {
+    window.alert("You need to provide a valid answer. Please try again.");
+    return special();
+  }
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
