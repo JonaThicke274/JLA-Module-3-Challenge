@@ -98,6 +98,19 @@ function special () {
   }
 }
 
+// Function to determine which character types will be used in the password generation
+function charTypes() {
+  var upperCaseChar = upperCase();
+  var lowerCaseChar = lowerCase();
+  var numbersChar = numbers();
+  var specialChar = special();
+
+  if (upperCaseChar === false && lowerCaseChar === false && numbersChar === false && specialChar === false) {
+    window.alert("You need at least one character type selected. Pleases try again.");
+    return charTypes();
+  }
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
