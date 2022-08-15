@@ -1,8 +1,5 @@
 // Assignment code here
 
-// Password criteria: length (will be between 8 and 128 characters), character types: uppercase, lowercase, numbers, special characters
-// Character types: at least 1 must be selected and then validated via prompt
-
 // Function to ask user for password length
 function charLength () {
   // Ask user to input length of password, between 8 and 128
@@ -14,7 +11,7 @@ function charLength () {
     // Calls function again
     return charLength();
   }
-  console.log (passLength);
+
   return passLength;
 };
 
@@ -172,6 +169,25 @@ function charTypes() {
   else if (upperCaseChar === false && lowerCaseChar === false && numbersChar === false && specialChar === true) {
     return specialLibrary;
   }
+}
+
+// Password generation function
+function generatePassword() {
+  // Calls functions to determine password length and acceptable characters
+  var passLength = charLength();
+  var passLibrary = charTypes();
+  
+  // Initialize password with empty string
+  password = ""
+  // For loop to generate each character of the password randomly
+  for (var i = 1; i <= passLength; i++) {
+    // Using Math.floor and Math.random to determine the index of the passLibrary
+    randomIndex = Math.floor(Math.random() * passLibrary.length);
+    // Concatenating the randomly generated characters the password individually
+    password = password + passLibrary[randomIndex];
+  }
+
+  return password;
 }
 
 // Get references to the #generate element
