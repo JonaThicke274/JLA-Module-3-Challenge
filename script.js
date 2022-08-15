@@ -98,6 +98,20 @@ function special () {
   }
 }
 
+// Libraries of the different character types
+const upperCaseLibrary = [
+  "A", "B" , "C" , "D", "E", "F", "G" , "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+]
+const lowerCaseLibrary = [
+  "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+]
+const numbersLibrary = [
+  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+]
+const specialLibrary = [
+  " ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"
+]
+
 // Function to determine which character types will be used in the password generation
 function charTypes() {
   // Calling the declared functions for each of the different charactere types
@@ -112,51 +126,51 @@ function charTypes() {
     return charTypes();
   }
 
-  // If/else-if clauses for each libarary of characters to draw from (PLACEHOLDER return results)
+  // If/else-if clauses for each libarary of characters to draw from
   if (upperCaseChar === true && lowerCaseChar === false && numbersChar === false && specialChar === false){
-    return "library1";
+    return upperCaseLibrary;
   }
   else if (upperCaseChar === true && lowerCaseChar === true && numbersChar === false && specialChar === false) {
-    return "library2";
+    return upperCaseLibrary.concat(lowerCaseLibrary);
   }
   else if (upperCaseChar === true && lowerCaseChar === false && numbersChar === true && specialChar === false) {
-    return "library3";
+    return upperCaseLibrary.concat(numbersLibrary);
   }
   else if (upperCaseChar === true && lowerCaseChar === false && numbersChar === false && specialChar === true) {
-    return "library4";
+    return upperCaseLibrary.concat(specialLibrary);
   }
   else if (upperCaseChar === true && lowerCaseChar === true && numbersChar === true && specialChar === false) {
-    return "library5";
+    return upperCaseLibrary.concat(lowerCaseLibrary, numbersLibrary);
   }
   else if (upperCaseChar === true && lowerCaseChar === false && numbersChar === true && specialChar === true) {
-    return "library6";
+    return upperCaseLibrary.concat(numbersLibrary, specialLibrary);
   }
   else if (upperCaseChar === true && lowerCaseChar === true && numbersChar === false && specialChar === true) {
-    return "library7";
+    return upperCaseLibrary.concat(lowerCaseLibrary, specialLibrary);
   }
   else if (upperCaseChar === true && lowerCaseChar === true && numbersChar === true && specialChar === true) {
-    return "library8";
+    return upperCaseLibrary.concat(lowerCaseLibrary, numbersLibrary, specialLibrary);
   }
   else if (upperCaseChar === false && lowerCaseChar === true && numbersChar === true && specialChar === true) {
-    return "library9";
+    return lowerCaseLibrary.concat(numbersLibrary, specialLibrary);
   }
   else if (upperCaseChar === false && lowerCaseChar === true && numbersChar === false && specialChar === false) {
-    return "library10";
+    return lowerCaseLibrary;
   }
   else if (upperCaseChar === false && lowerCaseChar === true && numbersChar === true && specialChar === false) {
-    return "library11";
+    return lowerCaseLibrary.concat(numbersLibrary);
   }
   else if (upperCaseChar === false && lowerCaseChar === true && numbersChar === false && specialChar === true) {
-    return "library12";
+    return lowerCaseLibrary.concat(specialLibrary);
   }
   else if (upperCaseChar === false && lowerCaseChar === false && numbersChar === true && specialChar === false) {
-    return "library13";
+    return numbersLibrary;
   }
   else if (upperCaseChar === false && lowerCaseChar === false && numbersChar === true && specialChar === true) {
-    return "library14";
+    return numbersLibrary.concat(specialLibrary);
   }
   else if (upperCaseChar === false && lowerCaseChar === false && numbersChar === false && specialChar === true) {
-    return "library15";
+    return specialLibrary;
   }
 }
 
