@@ -6,13 +6,14 @@ function charLength () {
   var passLength = window.prompt("Please determine length of password: select an integer (inclusive) between 8 and 128.");
   
   // Validates user input for password length
-  if (passLength < 8 || passLength > 128) {
+  if (passLength >= 8 && passLength <= 128) {
+    return passLength;
+  }
+  else {
     window.alert("You need to provide a valid answer! Please try again, reminder: the length must be between 8 and 128.");
     // Calls function again
     return charLength();
   }
-
-  return passLength;
 };
 
 // Function to ask user if password needs uppercase characters
