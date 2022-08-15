@@ -100,14 +100,63 @@ function special () {
 
 // Function to determine which character types will be used in the password generation
 function charTypes() {
+  // Calling the declared functions for each of the different charactere types
   var upperCaseChar = upperCase();
   var lowerCaseChar = lowerCase();
   var numbersChar = numbers();
   var specialChar = special();
 
+  // Validating that at least one character type is selected
   if (upperCaseChar === false && lowerCaseChar === false && numbersChar === false && specialChar === false) {
-    window.alert("You need at least one character type selected. Pleases try again.");
+    window.alert("You need at least one character type selected. Please try again.");
     return charTypes();
+  }
+
+  // If/else-if clauses for each libarary of characters to draw from (PLACEHOLDER return results)
+  if (upperCaseChar === true && lowerCaseChar === false && numbersChar === false && specialChar === false){
+    return "library1";
+  }
+  else if (upperCaseChar === true && lowerCaseChar === true && numbersChar === false && specialChar === false) {
+    return "library2";
+  }
+  else if (upperCaseChar === true && lowerCaseChar === false && numbersChar === true && specialChar === false) {
+    return "library3";
+  }
+  else if (upperCaseChar === true && lowerCaseChar === false && numbersChar === false && specialChar === true) {
+    return "library4";
+  }
+  else if (upperCaseChar === true && lowerCaseChar === true && numbersChar === true && specialChar === false) {
+    return "library5";
+  }
+  else if (upperCaseChar === true && lowerCaseChar === false && numbersChar === true && specialChar === true) {
+    return "library6";
+  }
+  else if (upperCaseChar === true && lowerCaseChar === true && numbersChar === false && specialChar === true) {
+    return "library7";
+  }
+  else if (upperCaseChar === true && lowerCaseChar === true && numbersChar === true && specialChar === true) {
+    return "library8";
+  }
+  else if (upperCaseChar === false && lowerCaseChar === true && numbersChar === true && specialChar === true) {
+    return "library9";
+  }
+  else if (upperCaseChar === false && lowerCaseChar === true && numbersChar === false && specialChar === false) {
+    return "library10";
+  }
+  else if (upperCaseChar === false && lowerCaseChar === true && numbersChar === true && specialChar === false) {
+    return "library11";
+  }
+  else if (upperCaseChar === false && lowerCaseChar === true && numbersChar === false && specialChar === true) {
+    return "library12";
+  }
+  else if (upperCaseChar === false && lowerCaseChar === false && numbersChar === true && specialChar === false) {
+    return "library13";
+  }
+  else if (upperCaseChar === false && lowerCaseChar === false && numbersChar === true && specialChar === true) {
+    return "library14";
+  }
+  else if (upperCaseChar === false && lowerCaseChar === false && numbersChar === false && specialChar === true) {
+    return "library15";
   }
 }
 
